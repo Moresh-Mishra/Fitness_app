@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins","sans-serif"; 
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: 30px;
+}
+
+h1{
+    color: red;
+}
+
+ul{
+    color: #ffffff;
+}
+
+li{
+    margin-bottom: 15px;
+}
+
+.small-advice{
+    font-size: 18px;
+    font-weight: 18px;
+    color: #9e9c9c;
+}
+
+.remember-me{
+    margin-top: 10px;
+}
+
+.remember-me input{
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.remembermetext{
+    color: #F4F6FC;
+    font-size: 18px;
+    font-weight: 200px;
+}
+
+.butns{
+    margin-top: 15px;
+}
+.nav-button {
+    background-color: #007BFF; /* Blue background add this if dark light mode*/
+    background-color: transparent;
+    color: white; /* White text add this if dark light mode*/
+    font-size: 20px; /* Font size */
+    padding: 15px 30px; /* Padding for size */
+    /* border: none; No border  add this if dark light mode*/
+    border: 2px solid #ffffff; 
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin: 0 10px; /* Spacing between buttons */
+}
+  
+.likely-picked{
+    color: black;
+    background-color: #ffffff;
+    border: none;
+} 
+
+.nav-button:hover {
+    /* background-color: #0056b3; Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+  
+.nav-button:active {
+    /* background-color: #003d80; Even darker blue when clicked */
+    transform: scale(1); /* Reset zoom effect */
+}
+
+@media only screen and (max-width: 480px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: rgb(0, 0, 0);
+        font-size: 20px;
+        font-weight: 25px;
+    }
+
+    .container{
+        padding: 25px;
+    }
+
+    .nav-button {
+        background-color: #007BFF; /* Blue background add this if dark light mode*/
+        background-color: transparent;
+        color: white; /* White text add this if dark light mode*/
+        font-size: 16px; /* Font size */
+        padding: 12px 12px; /* Padding for size */
+        /* border: none; No border  add this if dark light mode*/
+        border: 2px solid #ffffff; 
+        border-radius: 10px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+        margin: 0 10px; /* Spacing between buttons */
+    }
+
+    .likely-picked{
+        color: black;
+        background-color: #ffffff;
+        border: none;
+    } 
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ body{
+    background-color: black;
+ }       
+.main_card{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5%;
+}
+.why_to_choose_us h1{
+  position: relative;
+  left:30px;
+  top: 20px                   ;
+  color: #d9fd12;
+  text-align: center;
+  font-size: 3rem;
+}
+.card {
+  width: 300px;
+  height: 400px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 12px #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color:black;
+
+}
+.card1{
+  background-image: url(./images/gym\ pic.jpg);
+  background-size: cover;
+}
+.card2{
+  background-image: url(./images/gym2_image.jpg);
+  background-size: cover;
+}
+.card:hover{
+  transform: scale(1.05);
+  box-shadow:10px solid white;
+  transition: transform 0.3s ease-in-out;
+  .exercise-description{
+      color: white;
+  }
+}
+.exercise-title {
+    color: #d9fd12;
+    font-size: 3.05rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+}
+
+.card-content {
+  padding: 15px;
+}
+button {
+  background-color: black;
+  border: black;
+}
+
+    </style>
+</head>
+<body>
+    <div class="why_to_choose_us">
+        <h1>- Where Are You Exercising ?-</h1>
+        <div class="main_card">
+          <form action="/at_gym" method="post">
+            <input type="hidden" id="nameInput" name="table_name">
+            <input type="hidden" name="location" value="gym">
+            <button>
+              <div class="card card1">
+                <div class="card-content">
+                  <h2 class="exercise-title">Gym</h2><br>
+                </div>
+              </div>
+            </button>
+          </form>
+          <form action="/at_home" method="post">
+            <input type="hidden" id="nameInput" name="table_name">
+            <input type="hidden" name="location" value="home">
+            <button>
+              <div class="card card2">
+                <img src="" class="exercise-gif">
+                <div class="card-content">
+                  <h2 class="exercise-title">Home</h2><br>
+                </div>
+              </div>
+            </button>
+          </form>
+        </div>
+    </div>
+      
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const nameAttr = urlParams.get("name");
+      document.querySelectorAll('input[name="table_name"]').forEach(input => {
+            input.value = nameAttr;
+          });// Use it as needed
+    </script>
+</body>
+</html>

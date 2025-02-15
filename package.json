@@ -1,0 +1,32 @@
+{
+  "name": "fitness-app",
+  "version": "1.0.0",
+  "main": "function.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AryaMayekar/Fitness-app.git"
+  },
+  "author": "Arya, Moresh, Rohit, Ansh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AryaMayekar/Fitness-app/issues"
+  },
+  "homepage": "https://github.com/AryaMayekar/Fitness-app#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cookie-parser": "^1.4.7",
+    "dirname": "^0.1.0",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.12.0",
+    "nodemon": "^3.1.9"
+  }
+}

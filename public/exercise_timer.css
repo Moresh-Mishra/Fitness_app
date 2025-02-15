@@ -1,0 +1,671 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --base-clr: #0c0c0c;
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --text-clr: #e6e6ef;
+    --accent-clr: #d9fd12;
+    --secondary-text-clr: #b0b3c1;
+  }
+
+.exercise-main-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--base-clr);
+}
+
+.exercise-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.asking{
+    color: var(--text-clr);
+}
+
+.dash-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.dash {
+    width: 20%;
+    border: 5px solid var(--secondary-text-clr);
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.dash.active {
+    border: 5px solid var(--accent-clr);
+}
+
+.gif-box {
+    width: 50%;
+    height: 60%;
+    margin: 5px;
+}
+
+.full-screen-video {
+    width: 100%;
+    height: 100%;
+}
+
+.rest-time-container {
+    width: 100%;
+    height: 40%;
+}
+
+.next-exercise-info {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* progressbar time */
+.time {
+    font-size: 30px;
+    color: var(--text-clr);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.colonp {
+    font-size: 30px;
+    width: 10px;
+    margin-right: 5px;
+    padding-bottom: 5px;
+}
+
+.repsinfo{
+   font-size: 38px;
+   font-weight: 500;
+   color: var(--text-clr);
+   display: none;
+}
+
+.next-exercise-info h1 {
+    font-size: 48px;
+}
+
+.info-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-box img {
+    margin-left: 5px;
+    height: 29px;
+    width: 29px;
+    cursor: pointer;
+}
+
+.next-exercise-name {
+    font-size: 35px;
+    font-weight: 100;
+}
+
+.ongoingrestthings {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-arrow-div {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-arrow-div img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+/* buttons vala section for rep exercises */
+.main-button-container{
+    width: 80%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.donebtn{
+    width: 70%;
+    height: 30%;
+    background-color: var(--accent-clr);
+    color: var(--base-clr); /* White text add this if dark light mode*/
+    font-size: 20px; /* Font size */
+    font-weight: 500;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin: 0 10px; /* Spacing between buttons */
+    justify-content: center;
+    align-items: center;
+}
+
+.donebtn:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.next-exercise-name{
+    color: var(--text-clr);
+}
+
+/* timercss */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-timer-container {
+    width: 80%;
+    height: 100%;
+    
+}
+
+/*progress-indicator*/
+.circle-container {
+    width: 180px;
+    height: 180px;
+    /* width: 180px;
+    height: 180px; */
+    background-color: var(--hover-clr);
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.semi-circle {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: right center;
+}
+
+.semi-circle:nth-child(1) {
+    
+    background-color: var(--accent-clr);
+    z-index: 2;
+}
+
+.semi-circle:nth-child(2) {
+
+    background-color: var(--accent-clr);
+    z-index: 3;
+}
+
+.semi-circle:nth-child(3) {
+    background-color: var(--hover-clr);
+    z-index: 4;
+}
+
+.outer-most-circle {
+    width: 150px;
+    height: 150px;
+    background-color: var(--base-clr);
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.timer-container {
+    width: 130px;
+    height: 100px;
+    z-index: 6;
+}
+
+.timer {
+    width: 100px;
+    height: 100px;
+    color: var(--accent-clr);
+    z-index: 7;
+}
+
+.timer div {
+    font-size: 80px;
+    font-weight: 100;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px 0 5px;
+}
+
+.main-progress-container {
+    width: 80%;
+    height: 100%;
+    background-color: var(--base-clr);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-container {
+    width: 80%;
+    height: 30%;
+    background-color: var(--secondary-text-clr);
+    border-radius: 40px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    border: none;
+    border-radius: 40px;
+    background-color: var(--accent-clr);
+    transition: width 0.1s linear;
+    cursor: pointer;
+}
+
+.pausebtn, .playbtn {
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+
+}
+
+.playbtn {
+    display: none; /* Initially hidden */
+}
+
+.right-arrow-div {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-arrow-div img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.full-screen-video {
+    height: 100%;
+    width: 100%;
+}
+
+.instruction-main-container {
+    position: fixed; /* Fixed position to cover the whole screen */
+    top: 0;
+    left: 0;
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 100% of the viewport height */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+    backdrop-filter: blur(10px); /* Apply the blur effect */
+    z-index: 999; /* Ensure it is on top of other elements */
+    display: none;
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center the content */
+}
+
+.instruction-container {
+    height: 50%;
+    width: 50%;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--base-clr);
+    color: var(--text-clr);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tpcontainer {
+    width: 90%;
+}
+
+.instruction-headings {
+    font-size: 30px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.line {
+    width: 80%;
+    border: 1px solid var(--secondary-text-clr);
+    margin: 5px;
+}
+
+.instructionlist {
+    font-size: 22px;
+    font-weight: 500;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#close {
+    width: 80%;
+    height: 20%;
+    background-color: var(--accent-clr);
+    color: var(--base-clr); /* White text add this if dark light mode*/
+    font-size: 20px; /* Font size */
+    font-weight: 500;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin: 0 10px; /* Spacing between buttons */
+}
+
+#close:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.resttime-main-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--secondary-text-clr);
+    color: var(--base-clr);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.restime-containerf{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.restime-containerf .next-exercise-name{
+    color: var(--base-clr);
+}
+
+.addtimebtns{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.plussecs{
+    width: 40%;
+    height: 30%;
+    background-color: var(--base-clr);
+    color: var(--text-clr); /* White text add this if dark light mode*/
+    font-size: 20px; /* Font size */
+    font-weight: 500;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin: 0 10px; /* Spacing between buttons */
+}
+
+.plussecs:hover{
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.samay-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.resttimedenotion{
+    font-size: 30px;
+    font-weight: 500;
+    margin-right: 8px;
+}
+
+.samay{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.donefortheday{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 30%;
+    background-color: var(--accent-clr);
+    color: var(--base-clr); /* White text add this if dark light mode*/
+    font-size: 22px; /* Font size */
+    font-weight: 500;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin: 0 10px; /* Spacing between buttons */
+}
+
+.donefortheday:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+
+.finalmarks-container{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+} 
+
+.final-message-box{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+#final-message{
+   color: var(--accent-clr);
+   font-size: 80px;
+}
+
+#final-message2{
+   color: var(--text-clr);
+   font-size: 50px;
+}
+
+.btn-container2{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.nav-button {
+    background-color: var(--accent-clr); /* Blue background */
+    color: var(--base-clr); /* White text */
+    font-size: 25px; /* Font size */
+    padding: 15px 50px; /* Padding for size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    margin: 0 10px; /* Spacing between buttons */
+}
+
+.nav-button:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.nav-button:active {
+    transform: scale(1); /* Reset zoom effect */
+}
+
+@media only screen and (max-width: 480px) {
+
+    body{
+        overflow: hidden;
+    }
+
+    .dash {
+        width: 15%;
+        
+        border: 5px solid var(--secondary-text-clr);
+        border-radius: 5px;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+
+    .left-arrow-div {
+        width: 10%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .left-arrow-div img {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .right-arrow-div {
+        width: 10%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .right-arrow-div img {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .main-progress-container {
+        width: 70%;
+        height: 100%;
+        background-color: var(--base-clr);
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .progress-container {
+        width: 80%;
+        height: 20%;
+        background-color: var(--secondary-text-clr);
+        border-radius: 30px;
+    }
+
+    .progress-bar {
+        width: 0%;
+        height: 100%;
+        border: none;
+        border-radius: 30px;
+        background-color: var(--accent-clr);
+        transition: width 0.1s linear;
+        cursor: pointer;
+    }
+    
+    
+    .pausebtn, .playbtn {
+        position: absolute;
+        bottom: 2%;
+        left: 49%;
+        transform: translate(-50%, -50%);
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+    
+    }
+
+    .main-button-container{
+        width: 70%;
+        height: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .gif-box {
+        width: 50%;
+        height: 60%;
+        margin: 5px;
+    }
+    
+    
+    .finalmarks-container{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    } 
+    
+    .final-message-box{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+    
+    #final-message{
+       color: var(--accent-clr);
+       font-size: 40px;
+    }
+    
+    #final-message2{
+       color: var(--text-clr);
+       font-size: 30px;
+    }
+
+}

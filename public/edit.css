@@ -1,0 +1,170 @@
+*{
+    font-family: "Poppins","Inter";
+    box-sizing: border-box;
+    margin: 0;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  main {
+    min-height: 100vh;
+    flex-grow: 1;
+  }
+
+.edit-contact-main-container{
+    width: 80vw;
+    height: 160vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.edit-contact-container{
+    width: 90%;
+    height: 90%;
+}
+
+.edit-heading{
+    color: #ffffff;
+}
+
+.edit-heading hr{
+    width: 100%;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 28px;
+}
+
+.edit-form-info{
+    width: 80%;
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.editformat{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: green;  */
+    margin: 20px;
+    line-height: 2.5rem;
+}
+
+.editformat label{
+    width: 45%;   
+}
+
+.editformat .colons{
+    width: 10%; 
+    /* background-color: violet; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.editformat input{
+    width: 25%;   
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #000000;
+    color: white; /* Ensure text stays white */
+    caret-color: white; /* Makes cursor white */
+}
+
+input[type="date"]::-webkit-datetime-edit-text {
+    color: white;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+    color: white;
+}
+
+input[type="date"]::-webkit-input-placeholder {
+    color: white;
+}
+
+input[type="date"]::-moz-placeholder {
+    color: white;
+}
+
+input[type="date"]:-ms-input-placeholder {
+    color: white;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Makes it white */
+    opacity: 1;
+    padding: 8px;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+    padding: 8px; /* Adjust placeholder padding */
+}
+
+
+
+
+.editformat input:focus{
+    color: #FFFFFF;
+    border: 3px solid white; /* Add border */
+}
+
+.editformat input::placeholder{
+    padding: 8px;
+    color: #FFFFFF;
+}
+
+.editformat select{
+    width: 25%;
+    height: 40px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #000000;
+}
+
+select {
+    color: white; /* Change text color */
+    background-color: black; /* Change background */
+    padding: 5px; /* Add padding */
+    border: 1px solid white; /* Add border */
+    font-size: 18px;
+}
+
+.bmi{
+    width: 25%;
+    font-size: 18px;
+}
+
+.btns{
+    width: 89%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.sbutton {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 25px; /* Font size */
+    font-weight: 500;
+    padding: 5px 30px; /* Padding for size */
+    border: none; 
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.2s ease; /* Smooth transitions */
+    margin: 0 10px; /* Spacing between buttons */
+}
+
+.sbutton:hover{
+    transform: scale(1.05); /* Slight zoom effect */
+}

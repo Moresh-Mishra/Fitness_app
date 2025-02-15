@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout</title>
+    <link rel="stylesheet" href="exercise_timer.css">
+</head>
+<body>
+    <div class="exercise-main-container">
+        <div class="exercise-container">
+          <div class="dash-container" id="dash-container">
+           
+          </div>
+        
+          <div class="gif-box">
+
+          </div>
+        
+          <div class="rest-time-container">
+               <div class="next-exercise-info">
+                   <h1 class="asking">READY TO GO</h1> 
+                   <h1 class="time">00:09</h1> 
+                   <div class="info-box">
+                     <div class="next-exercise-name"></div>
+                     <div class="question-mark"><img class="close" src="./images/help_100dp_E8EAED_FILL0_wght400_GRAD0_opsz48.svg" alt="question mark"></div>
+                   </div>  
+                   <div class="repsinfo">0x0</div>   
+               </div>
+
+               <div class="ongoingrestthings">
+                  <div class="left-arrow-div"><img class="prevbtn" src="./images/arrow_left.svg" alt="leftarrow"></div> 
+
+                  <!--exercise chalu karne ke phele vala timer-->
+                  <div class="main-timer-container center ">
+                      <div class="circle-container center">
+                          <div class="semi-circle"></div>
+                          <div class="semi-circle"></div>
+                          <div class="semi-circle"></div>
+                          <div class="outer-most-circle"></div>
+                      </div> 
+    
+                      
+                      <div class="timer-container center">
+                          <div class="timer center"></div>
+                      </div>
+                  </div>
+                 
+                  <!--exercise vala timer-->
+                  <div class="main-progress-container">
+                        <div class="progress-container">
+                         <div class="progress-bar" id="progress-bar"></div>
+                         <img class="pausebtn controls" id="pausebtn" src="./images/pause_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="pause">
+                         <!-- <img class="playbtn controls" id="playbtn" src="./images/play_circle_100dp_E8EAED_FILL0_wght400_GRAD0_opsz48.svg" alt="play"> -->
+                        </div>
+                  </div>
+
+                  <!--buttons vala section-->
+                  <div class="main-button-container">
+                    <button id="donebtn" class="donebtn">Mark as Done</button>
+                    <button id="donefortheday" class="donefortheday">Done for the day</button>
+                  </div>
+
+                   <div class="right-arrow-div"><img class="nextbtn" src="./images/arrow_right.svg" alt="rightarrow"></div>
+                </div>
+                
+               
+            </div>
+        </div>
+
+        <div class="instruction-main-container">
+       
+            <div class="instruction-container">
+                <div class="tpcontainer">
+                 <div class="instruction-headings">Instructions</div>
+                 <hr class="line"></hr>
+                </div>
+                <ul class="instructionlist"></ul>
+                <button id="close" class="close">Close</button>
+            </div>
+            
+        </div>
+
+        <div class="resttime-main-container">
+          <div class="restime-containerf">
+              <div class="gif-box">
+
+              </div>
+
+              <div class="info-box">
+                  <div class="next-exercise-name">JUMPING JACKS</div>
+                  <div class="question-mark"><img class="close" src="./images/help_100dp_E8EAED_FILL0_wght400_GRAD0_opsz48.svg" alt="question mark"></div>
+              </div>
+            
+              <div class="samay-box">
+                 <div class="resttimedenotion">Rest Time:</div>
+                 <div class="samay">01:00</div>
+              </div>
+
+              <div class="addtimebtns">
+                  <button id="add20sec" class="plussecs">+30 secs</button>
+                  <button id="skip" class="plussecs">Skip</button> 
+              </div>
+         </div>
+        </div>
+        <div class="finalmarks-container" id="finalmarks-container">
+            <div class="final-message-box">
+             <h1 id="final-message">hi</h1>
+             <h1 id="final-message2">hi</h1>
+            </div>
+           <br>
+           <div class="btn-container2">
+             <a href="/dashboard.html"><button class="nav-button" id="homebtn">Dashboard ></button></a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="exercise_timer.js"></script>
+</body>
+</html>

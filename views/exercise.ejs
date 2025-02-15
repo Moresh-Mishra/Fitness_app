@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exercise.css">
+</head>
+<body>
+    <% for(exercise of exercises){ %>
+        <div class="exercise_info">
+            <div class="heading">
+                <h1><%=exercise.heading %></h1>
+            </div>
+            <div class="gif">
+                <img src="<%=exercise.male_gif %>" alt="">
+            </div>
+            <div class="duration">
+                <h2>Duration:   <%=exercise.minutes %>:<%=exercise.seconds %><%=exercise.reps %> minutes</h2>
+            </div>
+            <div class="instruction">
+                <h1>Instruction</h1>
+                <ul>
+                  <li><h2><%=exercise.instruction1 %></h2></li>  
+                  <li> <h2><%=exercise.instruction2 %></h2></li>
+                  <li><h2><%=exercise.instruction3 %></h2></li>
+                  <li><h2><%=exercise.instruction4 %></h2></li>
+                </ul>
+            </div>
+            <% let targetAreaString = exercise.targetarea;
+        
+            // Remove the square brackets and split by comma
+            let targetAreaArray = targetAreaString.replace(/\[|\]/g, "").split(",");
+            
+            // Trim spaces if any
+            targetAreaArray = targetAreaArray.map(item => item.trim());
+            
+            console.log(targetAreaArray); %>
+            <div class="target_area">
+                <h2>Focous Area</h2>
+                <ul>
+                    <% for(let i=0;i<targetAreaArray.length;i++){ %>
+                    <li><%=targetAreaArray[i]%></li>
+                    <% } %>
+                </ul>
+            </div>
+            <div class="target_area_pic">
+                <img src="<%=exercise.mpic_front_targetarea%>" alt="">
+                <img src="<%=exercise.fpic_front_targetarea %>" alt="">
+            </div>
+            <div class="note">
+               <h1>Note:</h1> <h2><%=exercise.note%></h2>
+            </div>
+            <form action="/dashboard.html" method="get">
+                <button class="backtoselect">Back to selection?</button>
+            </form>
+        </div>
+        
+    <% } %>
+
+
+</body>
+</html>

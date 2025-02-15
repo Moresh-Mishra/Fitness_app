@@ -1,0 +1,60 @@
+*{
+  background-color: black;
+}
+body {
+    font-family: Arial, sans-serif;
+  }
+  .main h1{
+    margin-left: 5%;
+    color: #d9fd12;
+  }
+  .exercise{
+    margin: 2% 10% 2% 10%;
+  }
+
+  .main_card{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+}
+.main_card:hover{
+  transform: scale(1.01);
+  border:2px solid #d9fd12 ;
+  transition: transform 0.3s ease-in-out;
+  background-color: rgb(18, 17, 17);
+  .card_content{
+    background-color: rgb(18, 17, 17);
+  }
+}
+.card_gif img{
+    width: 150px;
+    height: auto;
+}
+.card_content{
+    flex: 1;  
+    position: relative;
+    left: 1%;
+    font-size: 1.5rem;
+    color: white;
+    overflow: hidden;
+}
+.start_btn{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    position:fixed;
+    bottom: 0px;
+    width: 80%;
+    z-index: 1;
+
+}
+.start_btn button{
+  color: #d9fd12;
+  font-size: 1.05rem;
+  border: none;
+}
